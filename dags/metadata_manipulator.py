@@ -16,7 +16,7 @@ dag = DAG(
         }
 )
 
-run_query = PostgresOperator(
+PostgresOperator(
     task_id='run_query',
     postgres_conn_id='metadata-db',
     sql="SELECT 1;",
