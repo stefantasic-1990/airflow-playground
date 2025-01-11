@@ -20,11 +20,11 @@ def write_runs(ti=None):
             file.write(f"{run}\n")
 
 dag = DAG(
-    dag_id = "metadata_manipulator",
-    start_date = days_ago(1),
-    schedule_interval = "*/5 * * * *",
-    catchup = False,
-    default_args = {
+    dag_id="metadata_manipulator",
+    start_date=days_ago(1),
+    schedule_interval="*/5 * * * *",
+    catchup=False,
+    default_args={
         "owner": "stefantasic",
         "depends_on_past": False,
         "retries": 2,
